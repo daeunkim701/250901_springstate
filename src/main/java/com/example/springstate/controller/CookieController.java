@@ -11,6 +11,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class CookieController {
+
+    @GetMapping("/delete-theme")
+    public String deleteTheme(HttpServletResponse response) {
+        Cookie themeCookie = new Cookie("theme", "");
+        themeCookie.setMaxAge(0); // 바로 만료되게 해서 삭제 효과
+        response.addCookie(themeCookie);
+        return "redirect:/delete-theme";
+    }
+
     @GetMapping("/set-theme")
     public String setTheme(HttpServletResponse response) {
         Cookie themeCookie = new Cookie("theme", "dark");

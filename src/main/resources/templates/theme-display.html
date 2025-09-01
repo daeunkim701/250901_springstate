@@ -8,8 +8,9 @@
     <title>테마 표시</title>
 </head>
 <body>
-<h1>테마 표시</h1>
-<p th:text="${currentTheme}"></p>
-<a th:href="@{/set-theme}">다크로 세팅</a>
+    <h1>테마 표시</h1>
+    <p th:text="${currentTheme}"></p>
+    <a th:href="@{/set-theme}">다크로 세팅</a>
+    <a th:href="@{/delete-theme}">만료시키기</a>
 </body>
 </html>
