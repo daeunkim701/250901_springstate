@@ -5,13 +5,11 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>결과 페이지</title>
+    <title>테마 표시</title>
 </head>
 <body>
-<h1>결과 페이지</h1>
-<!-- 주소창에 노출됨 -> 서버가 주지 않아도 쓸 수 있음 -->
-<p th:if="${message}" th:text="${message}"></p>
-<!-- addFlashAttribute는 주소창에 노출되지 않는다 (세션) -->
-<p th:if="${message2}" th:text="${message2}"></p>
+<h1>테마 표시</h1>
+<p th:text="${currentTheme}"></p>
+<a th:href="@{/set-theme}">다크로 세팅</a>
 </body>
 </html>
